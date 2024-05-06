@@ -3,26 +3,29 @@ let fruits = ["apple" , "banana" , "orange" , "mango","apple" , "banana" , "oran
 
 /*  Push , Pop , shift , unshift */
 
+console.log("Push"); 
 console.log(fruits.push("lime"));
 console.log(fruits);
+console.log("Pop"); 
 console.log(fruits.pop());
 console.log(fruits);
+console.log("Shift"); 
 console.log(fruits.shift());  //removes element from front
 console.log(fruits);
+console.log("UnShift"); 
 console.log(fruits.unshift("lime")); //adds element from fron
 console.log(fruits);
 
 fruits.splice(7,9); //remove elements from 3
 console.log(fruits);
-fruits.splice(4,5,"orange","mango"); //remove elements from 4 to 5 and adds 'orange" and mango into that index
+console.log("Splice"); 
+fruits.splice(4,5,"orange","mango"); //remove elements at 5 elements from index 4  and adds 'orange" and mango into that index
 console.log(fruits)
 
 let a = [101,102,103,104,105,106,107,108,109,NaN];
 console.log(a.indexOf(102));  //1
 console.log(a.includes(102)); //true
-console.log(a.indexOf(NaN));  //-1
-
-
+console.log(a.indexOf(NaN));  //-1 because indexOf skips empty slots , the method indexOf is generic it expects the value to have length and integer also NaN can never be compared as equal
 
 let boolean=fruits.find((value,index,arr)=>{
     if(value== "orange")

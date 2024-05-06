@@ -1,7 +1,7 @@
 function manipulateArray(arr) 
 {
     arr.push(5);//arrays are objects and object are reference types due to pass by reference the original array also gets modified
-    arr =[1];
+    arr =[1]; //modifies the arr to point to new value and not to list and here we start pointing arr and list to two different memory and comes into real when we return
     return arr;
 }
 
